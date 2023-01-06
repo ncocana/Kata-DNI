@@ -15,7 +15,7 @@ class AssignmentTable:
         except:
             return "This letter is not in use."
 
-    def getLetter(self, numbersDni):
+    def calculateLetter(self, numbersDni):
 
         positionLetter = int(numbersDni) % self.getLenghtTable()
         return self.getPositionLetter(positionLetter)

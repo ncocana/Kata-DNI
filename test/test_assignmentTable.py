@@ -28,14 +28,14 @@ def test_getPositionLetter(testTable):
 @pytest.mark.test_getLetter
 def test_getLetter(testTable):
 
-    assert testTable.getLetter(43235117) == "Q"
-    assert testTable.getLetter(45301872) == "Z"
-    assert testTable.getLetter(46389099) == "P"
-    assert testTable.getLetter(43205465) == "B"
-    assert testTable.getLetter(43211434) == "T"
-    assert testTable.getLetter(41573239) == "A"
-    #assert testTable.getLetter(23) == "This letter is not in use."
-    #assert testTable.getLetter(50) == "This letter is not in use."
+    assert testTable.calculateLetter(43235117) == "Q"
+    assert testTable.calculateLetter(45301872) == "Z"
+    assert testTable.calculateLetter(46389099) == "P"
+    assert testTable.calculateLetter(43205465) == "B"
+    assert testTable.calculateLetter(43211434) == "T"
+    assert testTable.calculateLetter(41573239) == "A"
+    #assert testTable.calculateLetter(23) == "This letter is not in use."
+    #assert testTable.calculateLetter(50) == "This letter is not in use."
 
 '''
 43235117Q
