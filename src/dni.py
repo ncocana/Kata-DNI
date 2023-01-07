@@ -1,3 +1,10 @@
+# The following two lines need to be added for the module "assignmentTable"
+# to be found when executing this file with the path "src.assignmentTable",
+# otherwise it will give an error of "ModuleNotFoundError: No module named 'src'".
+# The path needs to be "src.assignmentTable",
+# otherwise it will give the error of "ModuleNotFoundError" when executing the tests.
+from sys import path as systemPath
+systemPath.insert(0, './')
 from src.assignmentTable import *
 
 class Dni:
@@ -67,7 +74,10 @@ class Dni:
     # Calcules and returns the correct letter based on the assigment table.
     def getLetterTable(self):
 
-        return self.table.calculateLetter(self.getNumbersDni())
+        if self.getNumberValid():
+            return self.table.calculateLetter(self.getNumbersDni())
+        
+        return False    #pragma: no cover
 
     # Returns "True" if the letters compared are the same.
     # Else, returns "False".
@@ -109,3 +119,22 @@ class Dni:
         # return "True".
         # Else, return "False".
         return self.checkNumbersDni() and self.checkLetterDni()
+
+if __name__ == "__main__":  #pragma: no cover
+
+    testCases = ["78484464T","72376173A","01817200Q","95882054E","63587725Q",
+    "49481746342Y","45608961","AAAI","45185088Ñ","asdw0","","45185038I"]
+
+    print("\n #### TEST CASES #### \n")
+    print(" True = Valid")
+    print(" False = Invalid \n")
+    print("------------------------ \n")
+
+    for dni in testCases:
+
+        testDni = Dni(dni)
+        print("\n" + dni)
+        testDni.checkDniValid()
+        print('DNI --->', testDni.getNumberValid())
+        print('Letter --->', testDni.getLetterValid())
+        print("DNI's letter is", testDni.getLetterTable())
