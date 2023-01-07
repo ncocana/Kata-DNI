@@ -34,23 +34,14 @@ def test_getLetter(testTable):
     assert testTable.calculateLetter(43205465) == "B"
     assert testTable.calculateLetter(43211434) == "T"
     assert testTable.calculateLetter(41573239) == "A"
-    #assert testTable.calculateLetter(23) == "This letter is not in use."
-    #assert testTable.calculateLetter(50) == "This letter is not in use."
 
-'''
-43235117Q
-45301872Z
-46389099P
-43205465B
-43211434T
-41622502T
-45608961F
-43221731Q
-45185088R
-45693270K
-41573239A
-43199091P
-54622121L
-49482728E
-43187839A
-'''
+@pytest.mark.test_getTableContent
+def test_getTableContent(testTable):
+
+    assert "O" not in testTable.getTableContent()
+    assert "I" not in testTable.getTableContent()
+    assert "U" not in testTable.getTableContent()
+    assert "Ñ" not in testTable.getTableContent()
+
+    for letter in testTable.getTableContent():
+        assert letter in testTable.getTableContent()
