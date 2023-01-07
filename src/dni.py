@@ -62,30 +62,18 @@ class Dni:
     # which should be integers.
     def getNumbersDni(self):
 
-        if self.getNumberValid():
-            return self.dni[:-1]
+        return self.dni[:-1]
 
-        return False
-
-    # If "getNumberValid()" is True,
-    # return the correct letter calculated based on the assigment table.
-    # Else, return "False".
+    # Calcules and returns the correct letter based on the assigment table.
     def getLetterTable(self):
 
-        if self.getNumberValid():
-            return self.table.calculateLetter(self.getNumbersDni())
+        return self.table.calculateLetter(self.getNumbersDni())
 
-        return False
-
-    # If "getNumberValid()" is True,
-    # return "True" if the letters compared are the same.
-    # Else, return "False".
+    # Returns "True" if the letters compared are the same.
+    # Else, returns "False".
     def checkLetterValid(self):
 
-        if self.getNumberValid():
-            return self.getLetterDni() == self.getLetterTable()
-        
-        return False
+        return self.getLetterDni() == self.getLetterTable()
 
     # Returns its boolean value,
     # which can be "False" or "True".
@@ -122,7 +110,7 @@ class Dni:
         self.checkLetterDni()
 
         # If both "getNumberValid()" and "getLetterValid()"
-        # return the boolean value "True",
+        # return the same boolean value (which should be "True"),
         # return "True".
         if self.getNumberValid() and self.getLetterValid():
             return True
