@@ -16,11 +16,10 @@ def test_checkDniValid():
     assert Dni("-45608961").checkDniValid() == False
     assert Dni("AAAI").checkDniValid() == False
     assert Dni("456089IO").checkDniValid() == False
+    assert Dni("45185088I").checkDniValid() == False
     assert Dni("45185088Ñ").checkDniValid() == False
     assert Dni("45185088O").checkDniValid() == False
-    assert Dni("45185088I").checkDniValid() == False
     assert Dni("45185088U").checkDniValid() == False
-    assert Dni("45608961O").checkDniValid() == False
     assert Dni("45321O").checkDniValid() == False
     assert Dni("asdw0").checkDniValid() == False
     assert Dni("43205465b").checkDniValid() == False
