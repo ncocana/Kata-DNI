@@ -104,16 +104,8 @@ class Dni:
 
         # Call the functions to check if the numbers
         # and the letter of the DNI are valid.
-        # If so, changes the values of "getNumberValid()"
-        # and "getLetterValid()" to True.
-        self.checkNumbersDni()
-        self.checkLetterDni()
-
-        # If both "getNumberValid()" and "getLetterValid()"
+        # If both "checkNumbersDni()" and "checkLetterDni()"
         # return the same boolean value (which should be "True"),
         # return "True".
-        if self.getNumberValid() and self.getLetterValid():
-            return True
-        
         # Else, return "False".
-        return False
+        return self.checkNumbersDni() and self.checkLetterDni()
