@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This is a Kata proposed my [teacher](https://github.com/dfleta/Python_ejercicios/tree/master/Poo/DNI) to do for Christmas holidays.
+This is a Kata proposed by my [teacher](https://github.com/dfleta/Python_ejercicios/tree/master/Poo/DNI) to do for Christmas holidays.
 
 The task is to create a create a program that given a DNI's number, gets its corresponding letter.
 
