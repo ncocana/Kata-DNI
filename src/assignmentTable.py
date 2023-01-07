@@ -20,7 +20,6 @@ class AssignmentTable:
         positionLetter = int(numbersDni) % self.getLenghtTable()
         return self.getPositionLetter(positionLetter)
 
-    def showTable(self):
+    def getTableContent(self):
 
-        print(self.table)
-
+        return self.table
