@@ -122,7 +122,7 @@ class Dni:
 
 if __name__ == "__main__":  #pragma: no cover
 
-    testCases = ["78484464T","72376173A","01817200Q","95882054E","63587725Q",
+    '''testCases = ["78484464T","72376173A","01817200Q","95882054E","63587725Q",
     "49481746342Y","45608961","AAAI","45185088Ñ","asdw0","","45185038I"]
 
     print("\n #### TEST CASES #### \n")
@@ -135,6 +135,23 @@ if __name__ == "__main__":  #pragma: no cover
         testDni = Dni(dni)
         print("\n" + dni)
         testDni.checkDniValid()
-        print('DNI --->', testDni.getNumberValid())
+        print('Numbers --->', testDni.getNumberValid())
         print('Letter --->', testDni.getLetterValid())
-        print("DNI's letter is", testDni.getLetterTable())
+        print("DNI's letter is", testDni.getLetterTable())'''
+
+    dni = input("\n Write the DNI: ")
+    testDni = Dni(dni)
+
+    print("\n True = Valid")
+    print(" False = Invalid \n")
+    print("------------------------ \n")
+
+    print("\n" + dni)
+    testDni.checkDniValid()
+    print('Numbers --->', testDni.getNumberValid())
+    print('Letter --->', testDni.getLetterValid())
+    print("DNI's letter is", testDni.getLetterTable())
+    if testDni.checkDniValid():
+        print("Your DNI is valid.")
+    else:
+        print("Your DNI is not valid.")
