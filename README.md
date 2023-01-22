@@ -5,6 +5,7 @@
 -   [**Introduction**](#introduction)
 -   [**What is a DNI?**](#what-is-a-dni)
 -   [**How it works**](#how-it-works)
+-   [**UML Diagram**](#uml-diagram)
 
 ## Introduction
 
@@ -32,3 +33,7 @@ The program is formed by two classes: `AssignmentTable` and `Dni`.
 
 * `AssignmentTable`, as its name indicates, has the assignment table used to calculate the DNI's letter and therefore is responsible of the task of calculating the valid letter.
 * `Dni` is in charge of analizing the DNIs given and check if both the numbers and the letter are valid.
+
+## UML Diagram
+
+![DNI (UML) drawio](https://user-images.githubusercontent.com/117761602/213941481-87ef34de-d050-4e8a-b75c-be6115a60717.png)
